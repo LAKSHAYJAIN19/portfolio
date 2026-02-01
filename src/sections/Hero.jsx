@@ -5,6 +5,7 @@ import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { useGSAP} from '@gsap/react';
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
+import assetPath from "../utils/assetPath";
 const Hero = () => {
     useGSAP(()=>{
         gsap.fromTo('.hero-text h1',
@@ -24,7 +25,7 @@ const Hero = () => {
     return (
         <section id="hero" className="rel ative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
-                <img src="/images/bg.png" alt="background" />
+                <img src={assetPath('images/bg.png')} alt="background" />
             </div>
 
             <div className="hero-layout">
