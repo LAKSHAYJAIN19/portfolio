@@ -2,6 +2,7 @@ import React, {useRef} from 'react'
 import {gsap} from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { useGSAP} from "@gsap/react";
+import assetPath from '../utils/assetPath'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,7 +47,7 @@ const ShowcaseSection = () => {
                    {/*Left*/}
                     <div className="first-project-wrapper" ref={project1Ref}>
                         <div className="image-wrapper">
-                            <img src="/images/project1.png" alt="Ryde"/>
+                            <img src={assetPath('images/project1.png')} alt="Ryde"/>
                         </div>
                         <div className="text-content">
                             <h2>New Algorithm for Market Basket Analysis</h2>
@@ -62,7 +63,7 @@ const ShowcaseSection = () => {
                    <div className="project-list-wrapper overflow-hidden">
                      <div className="project" ref={project2Ref}>
                         <div className="image-wrapper bg-[#ffefdb]">
-                           <img src="/images/project2.png" alt="Library Management"/>
+                           <img src={assetPath('images/project2.png')} alt="Library Management"/>
                         </div>
                          <h2>Movie Recommendation System</h2>
                          <p className="text-white-50 md:text-xl">
@@ -73,7 +74,7 @@ const ShowcaseSection = () => {
                      </div>
                        <div className="project" ref={project3Ref}>
                            <div className="image-wrapper bg-[#ffe7eb]">
-                               <img src="/images/project3.png" alt="YC Directory"/>
+                               <img src={assetPath('images/project3.png')} alt="YC Directory"/>
                            </div>
                            <h2>Personal Playlist Player</h2>
                            <p className="text-white-50 md:text-xl">

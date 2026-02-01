@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react'
 import TitleHeader from "../components/TitleHeader.jsx";
 import ContactExperience from "../components/ContactExperience.jsx";
 import emailjs from '@emailjs/browser'
+import assetPath from '../utils/assetPath'
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -99,7 +100,7 @@ const Contact = () => {
                              <div className="bg-circle"/>
                              <p className="text">{loading?'Sending...':'Send Message'}</p>
                              <div className="arrow-wrapper">
-                                <img src="/images/arrow-down.svg" alt="arrow" />
+                                <img src={assetPath('images/arrow-down.svg')} alt="arrow" />
                              </div>
                          </div>
                        </button>

@@ -6,9 +6,10 @@ Files: computer-optimized.glb [486.38KB] > C:\Users\Lakshay\WebstormProjects\por
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import assetPath from '../../utils/assetPath'
 
 export function Computer(props) {
-  const { nodes, materials } = useGLTF('/models/computer-optimized-transformed.glb')
+  const { nodes, materials } = useGLTF(assetPath('models/computer-optimized-transformed.glb'))
   return (
     <group {...props} dispose={null}>
       <group position={[-4.005, 67.549, 58.539]}>
@@ -19,4 +20,4 @@ export function Computer(props) {
   )
 }
 
-useGLTF.preload('/models/computer-optimized-transformed.glb')
+useGLTF.preload(assetPath('models/computer-optimized-transformed.glb'))

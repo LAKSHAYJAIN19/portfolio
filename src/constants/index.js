@@ -26,8 +26,6 @@ const words = [
     { text: "and Evolving", imgPath: assetPath('images/designs.svg') },
     { text: "Learning", imgPath: assetPath('images/ideas.svg') },
     { text: "Building", imgPath: assetPath('images/code.svg') },
-    { text: "Developing", imgPath: assetPath('images/concepts.svg') },
-    { text: "and Evolving", imgPath: assetPath('images/designs.svg') }
 ];
 
 const counterItems = [
@@ -75,17 +73,17 @@ const logoIconsList = [
 
 const abilities = [
     {
-        imgPath: "/images/seo.png",
+        imgPath: assetPath('images/seo.png'),
         title: "Growth-oriented",
         desc: "I focus on continuous improvement by applying new skills through projects and real-world practice.",
     },
     {
-        imgPath: "/images/chat.png",
+        imgPath: assetPath('images/chat.png'),
         title: "Curious",
         desc: "I actively seek to learn new technologies and explore better ways to solve problems.",
     },
     {
-        imgPath: "/images/time.png",
+        imgPath: assetPath('images/time.png'),
         title: "Disciplined",
         desc: "I stay consistent with my learning goals and manage my time effectively to improve every day.",
     },
@@ -151,8 +149,8 @@ const expCards = [
     {
         review:
             "Philips is a leading Dutch health technology company, founded in 1891, that focuses on improving people's health and well-being through meaningful innovation.",
-        imgPath: "/images/exp1.png",
-        logoPath: "/images/logo1.png",
+        imgPath: assetPath('images/exp1.png'),
+        logoPath: assetPath('images/logo1.png'),
         title: "Product Security Intern",
         date: "August 2023 - June 2024",
         responsibilities: [
@@ -165,8 +163,8 @@ const expCards = [
     {
         review:
             "Containers are lightweight, portable units that package an application along with its dependencies, ensuring it runs consistently across different environments.Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.",
-        imgPath: "/images/exp2.png",
-        logoPath: "/images/logo2.png",
+        imgPath: assetPath('images/exp2.png'),
+        logoPath: assetPath('images/logo2.png'),
         title: "Kubernetes and Containers Bootcamp",
         date: "March 2024 - April 2024",
         responsibilities: [
@@ -179,8 +177,8 @@ const expCards = [
     {
         review:
             "Amazon Web Services (AWS) is a cloud computing platform that provides on-demand services like computing, storage, and databases, enabling businesses to build and scale applications efficiently.",
-        imgPath: "/images/exp3.png",
-        logoPath: "/images/logo3.png",
+        imgPath: assetPath('images/exp3.png'),
+        logoPath: assetPath('images/logo3.png'),
         title: "AWS Cloud Services Bootcamp",
         date: "May 2024 - June 2024",
         responsibilities: [
@@ -192,8 +190,8 @@ const expCards = [
     {
         review:
             "Celebal Technologies is a technology consulting company specializing in digital transformation, data engineering, cloud solutions, and enterprise platforms, helping organizations leverage modern technologies to drive business growth.",
-        imgPath: "/images/exp4.png",
-        logoPath: "/images/logo4.png",
+        imgPath: assetPath('images/exp4.png'),
+        logoPath: assetPath('images/logo4.png'),
         title: "PowerApps Training",
         date: "March 2023 - May 2023",
         responsibilities: [
@@ -210,65 +208,41 @@ const expCards = [
 const expLogos = [
     {
         name: "logo1",
-        imgPath: "/images/logo1.png",
+        imgPath: assetPath('images/logo1.png'),
     },
     {
         name: "logo2",
-        imgPath: "/images/logo2.png",
+        imgPath: assetPath('images/logo2.png'),
     },
     {
         name: "logo3",
-        imgPath: "/images/logo3.png",
+        imgPath: assetPath('images/logo3.png'),
     },
     {
         name: "logo4",
-        imgPath: "/images/logo4.png",
+        imgPath: assetPath('images/logo4.png'),
     },
 ];
 
 const skills = [
     {
         name: "SpringBoot",
-        // mentions: "@estherhoward",
+        imgPath: assetPath('images/sb.png'),
         review:
             "Spring Boot simplifies Java-based web application and microservice development through pre-configured setups, embedded servers, and reduced boilerplate code. It is well-suited for building scalable, secure, and cloud-ready REST APIs and enterprise applications. I am currently learning Spring Boot through YouTube resources.",
-        imgPath: "/images/sb.png",
     },
     {
         name: "MERN",
-        // mentions: "@wadewarren",
         review:
             "The MERN stack—MongoDB, Express.js, React.js, and Node.js—is a JavaScript-based framework used to build dynamic and scalable web applications. I am currently learning these technologies through the online platform 30DC and plan to develop new projects to apply and strengthen these skills.",
-        imgPath: "/images/ms.png",
+        imgPath: assetPath('images/ms.png'),
     },
     {
         name: "Ai Tools and Certificates",
-        // mentions: "@guyhawkins",
         review:
             "I am actively learning new AI tools to accelerate my development process and improve productivity. Alongside this, I am working on building new projects to apply these tools in real-world scenarios and further honing my AI skills through Google’s free skill courses.",
-        imgPath: "/images/aitools.png",
+        imgPath: assetPath('images/aitools.png'),
     },
-    // {
-    //     name: "Marvin McKinney",
-    //     mentions: "@marvinmckinney",
-    //     review:
-    //         "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    //     imgPath: "/images/client5.png",
-    // },
-    // {
-    //     name: "Floyd Miles",
-    //     mentions: "@floydmiles",
-    //     review:
-    //         "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    //     imgPath: "/images/client4.png",
-    // },
-    // {
-    //     name: "Albert Flores",
-    //     mentions: "@albertflores",
-    //     review:
-    //         "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    //     imgPath: "/images/client6.png",
-    // },
 ];
 
 const socialImgs = [
