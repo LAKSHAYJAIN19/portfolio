@@ -1,3 +1,5 @@
+import assetPath from "../utils/assetPath";
+
 const navLinks = [
     {
         name: "Work",
@@ -18,14 +20,14 @@ const navLinks = [
 ];
 
 const words = [
-    { text: "Learning", imgPath: "/images/ideas.svg" },
-    { text: "Building", imgPath: "/images/code.svg" },
-    { text: "Developing", imgPath: "/images/concepts.svg" },
-    { text: "and Evolving", imgPath: "/images/designs.svg" },
-    { text: "Learning", imgPath: "/images/ideas.svg" },
-    { text: "Building", imgPath: "/images/code.svg" },
-    { text: "Developing", imgPath: "/images/concepts.svg" },
-    { text: "and Evolving", imgPath: "/images/designs.svg" }
+    { text: "Learning", imgPath: assetPath('images/ideas.svg') },
+    { text: "Building", imgPath: assetPath('images/code.svg') },
+    { text: "Developing", imgPath: assetPath('images/concepts.svg') },
+    { text: "and Evolving", imgPath: assetPath('images/designs.svg') },
+    { text: "Learning", imgPath: assetPath('images/ideas.svg') },
+    { text: "Building", imgPath: assetPath('images/code.svg') },
+    { text: "Developing", imgPath: assetPath('images/concepts.svg') },
+    { text: "and Evolving", imgPath: assetPath('images/designs.svg') }
 ];
 
 const counterItems = [
@@ -37,37 +39,37 @@ const counterItems = [
 
 const logoIconsList = [
     {
-        imgPath: "/images/logos/company-logo-1.png",
+        imgPath: assetPath('images/logos/company-logo-1.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-2.png",
+        imgPath: assetPath('images/logos/company-logo-2.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-3.png",
+        imgPath: assetPath('images/logos/company-logo-3.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-4.png",
+        imgPath: assetPath('images/logos/company-logo-4.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-5.png",
+        imgPath: assetPath('images/logos/company-logo-5.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-6.png",
+        imgPath: assetPath('images/logos/company-logo-6.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-7.png",
+        imgPath: assetPath('images/logos/company-logo-7.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-8.png",
+        imgPath: assetPath('images/logos/company-logo-8.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-9.png",
+        imgPath: assetPath('images/logos/company-logo-9.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-10.png",
+        imgPath: assetPath('images/logos/company-logo-10.png'),
     },
     {
-        imgPath: "/images/logos/company-logo-11.png",
+        imgPath: assetPath('images/logos/company-logo-11.png'),
     },
 ];
 
@@ -92,54 +94,54 @@ const abilities = [
 const techStackImgs = [
     {
         name: "React Developer",
-        imgPath: "/images/logos/react.png",
+        imgPath: assetPath('images/logos/react.png'),
     },
     {
         name: "Python Developer",
-        imgPath: "/images/logos/python.svg",
+        imgPath: assetPath('images/logos/python.svg'),
     },
     {
         name: "Backend Developer",
-        imgPath: "/images/logos/node.png",
+        imgPath: assetPath('images/logos/node.png'),
     },
     {
         name: "Interactive Developer",
-        imgPath: "/images/logos/three.png",
+        imgPath: assetPath('images/logos/three.png'),
     },
     {
         name: "Project Manager",
-        imgPath: "/images/logos/git.svg",
+        imgPath: assetPath('images/logos/git.svg'),
     },
 ];
 
 const techStackIcons = [
     {
         name: "Java",
-        modelPath: "/models/java_logo.glb",
+        modelPath: assetPath('models/java_logo.glb'),
         scale: 3,
         rotation: [0, 0, 0],
     },
     {
         name: "C++",
-        modelPath: "/models/cpp-logo.glb",
+        modelPath: assetPath('models/cpp-logo.glb'),
         scale: 45,
         rotation: [0, 0, 0],
     },
     {
         name: "React",
-        modelPath: "/models/react_logo-transformed.glb",
+        modelPath: assetPath('models/react_logo-transformed.glb'),
         scale: 1,
         rotation: [0, 0, 0],
     },
     {
         name: "Tailwind CSS",
-        modelPath: "/models/tailwind_css.glb",
+        modelPath: assetPath('models/tailwind_css.glb'),
         scale: 50,
         rotation: [0, -Math.PI / 2, 0],
     },
     {
         name: "Git",
-        modelPath: "/models/git-svg-transformed.glb",
+        modelPath: assetPath('models/git-svg-transformed.glb'),
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
     },
@@ -273,17 +275,17 @@ const socialImgs = [
     {
         name: "github",
         url: "https://github.com/LAKSHAYJAIN19?tab=repositories",
-        imgPath: "/images/gh.png",
+        imgPath: assetPath('images/gh.png'),
     },
     {
         name: "x",
         url: "https://x.com/Lakshayjntw",
-        imgPath: "/images/xlogo.png",
+        imgPath: assetPath('images/xlogo.png'),
     },
     {
         name: "linkedin",
         url: "https://www.linkedin.com/in/lakshayjain19/",
-        imgPath: "/images/li.png",
+        imgPath: assetPath('images/li.png'),
     },
 ];
 
