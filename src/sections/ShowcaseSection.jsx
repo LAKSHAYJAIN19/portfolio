@@ -65,11 +65,11 @@ const ShowcaseSection = () => {
                         <div className="image-wrapper bg-[#ffefdb]">
                            <img src={assetPath('images/project2.png')} alt="Library Management"/>
                         </div>
-                         <h2>Movie Recommendation System</h2>
+                         <h2>Take a shot!</h2>
                          <p className="text-white-50 md:text-xl">
-                             Created a movie recommendation system using machine learning algorithms
-                             to provide personalized suggestions based on user-input keywords
-                             such as movie genre, actor name, director name and other preferences.
+                             Built a mobile-responsive archery game using React.js, JavaScript (ES6), HTML5, and CSS3,
+                             implementing real-time touch interactions, animation logic, and dynamic viewport scaling
+                             to deliver smooth, pixel-accurate gameplay across devices.
                          </p>
                      </div>
                        <div className="project" ref={project3Ref}>
