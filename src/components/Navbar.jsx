@@ -32,7 +32,7 @@ const Navbar = () => {
                  ))}
              </ul>
            </nav>
-           <a href="https://drive.google.com/file/d/1J2LA2Lq9p5EXoxXUvCyri6sqHAqPTBHH/view?usp=sharing"
+           <a href="https://drive.google.com/file/d/1vuPKlvINHxjV9UVpiAVklwPEP2lhDi3Y/view?usp=sharing"
               className="contact-btn group flex flex-col" target="_blank">
                <div className="inner">
                    <span>My Resume</span>
