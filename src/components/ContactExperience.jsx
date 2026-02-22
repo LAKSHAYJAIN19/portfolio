@@ -38,61 +38,123 @@
 // }
 // export default ContactExperience
 
-import React, { useEffect, useState } from 'react'
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+// import React, { useEffect, useState } from 'react'
+// import { OrbitControls } from '@react-three/drei'
+// import { Canvas } from '@react-three/fiber'
+// import { Computer } from "./Models/Computer-optimized.jsx";
+
+// const ContactExperience = () => {
+
+//     const [isMobile, setIsMobile] = useState(false);
+
+//     useEffect(() => {
+//         const checkMobile = () => {
+//             setIsMobile(window.innerWidth < 768);
+//         };
+//         checkMobile();
+//         window.addEventListener("resize", checkMobile);
+//         return () => window.removeEventListener("resize", checkMobile);
+//     }, []);
+
+//     return (
+//         <Canvas
+//             camera={{ position: [0, 3, 7], fov: 45 }}
+//             shadows
+//             style={{ touchAction: "auto" }} // 🔥 allows scrolling
+//         >
+//             <ambientLight intensity={0.5} color="#fff4e6" />
+//             <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
+//             <directionalLight
+//                 position={[5, 9, 1]}
+//                 castShadow
+//                 intensity={2.5}
+//                 color="#ffd9b3"
+//             />
+
+//             {/* Disable rotate on mobile */}
+//             <OrbitControls
+//                 enableZoom={false}
+//                 enableRotate={!isMobile}
+//                 minPolarAngle={Math.PI / 5}
+//                 maxPolarAngle={Math.PI / 2}
+//             />
+
+//             <group scale={0.03} position={[0, -1.5, -2]} castShadow>
+//                 <Computer />
+//             </group>
+
+//             <mesh
+//                 receiveShadow
+//                 position={[0, -1.5, 0]}
+//                 rotation={[-Math.PI / 2, 0, 0]}
+//             >
+//                 <planeGeometry args={[30, 30]} />
+//                 <meshStandardMaterial color="#a46b2d" />
+//             </mesh>
+//         </Canvas>
+//     )
+// }
+
+// export default ContactExperience
+
+import React, { useEffect, useState } from "react";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { Computer } from "./Models/Computer-optimized.jsx";
 
 const ContactExperience = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-    const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
 
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return () => window.removeEventListener("resize", checkMobile);
-    }, []);
+    const handleResize = () => setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleResize);
 
-    return (
-        <Canvas
-            camera={{ position: [0, 3, 7], fov: 45 }}
-            shadows
-            style={{ touchAction: "auto" }} // 🔥 allows scrolling
-        >
-            <ambientLight intensity={0.5} color="#fff4e6" />
-            <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
-            <directionalLight
-                position={[5, 9, 1]}
-                castShadow
-                intensity={2.5}
-                color="#ffd9b3"
-            />
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
 
-            {/* Disable rotate on mobile */}
-            <OrbitControls
-                enableZoom={false}
-                enableRotate={!isMobile}
-                minPolarAngle={Math.PI / 5}
-                maxPolarAngle={Math.PI / 2}
-            />
+  return (
+    <Canvas
+      camera={{ position: [0, 3, 7], fov: 45 }}
+      shadows
+      style={{
+        touchAction: isMobile ? "pan-y" : "auto",
+        pointerEvents: isMobile ? "none" : "auto", // 🔥 KEY FIX
+      }}
+    >
+      <ambientLight intensity={0.5} color="#fff4e6" />
+      <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
+      <directionalLight
+        position={[5, 9, 1]}
+        castShadow
+        intensity={2.5}
+        color="#ffd9b3"
+      />
 
-            <group scale={0.03} position={[0, -1.5, -2]} castShadow>
-                <Computer />
-            </group>
+      {!isMobile && (
+        <OrbitControls
+          enableZoom={false}
+          minPolarAngle={Math.PI / 5}
+          maxPolarAngle={Math.PI / 2}
+        />
+      )}
 
-            <mesh
-                receiveShadow
-                position={[0, -1.5, 0]}
-                rotation={[-Math.PI / 2, 0, 0]}
-            >
-                <planeGeometry args={[30, 30]} />
-                <meshStandardMaterial color="#a46b2d" />
-            </mesh>
-        </Canvas>
-    )
-}
+      <group scale={0.03} position={[0, -1.5, -2]}>
+        <Computer />
+      </group>
 
-export default ContactExperience
+      <mesh
+        receiveShadow
+        position={[0, -1.5, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      >
+        <planeGeometry args={[30, 30]} />
+        <meshStandardMaterial color="#a46b2d" />
+      </mesh>
+    </Canvas>
+  );
+};
+
+export default ContactExperience;
