@@ -87,24 +87,13 @@ ul {
         @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
     }
 
-    .hero-layout {
-        @apply relative z-10 xl:mt-20 mt-24 
-        md:h-dvh min-h-screen 
-        flex flex-col xl:flex-row 
-        xl:items-center items-start 
-        justify-between;
+   .hero-layout {
+        @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
     }
 
-    .hero-text {
-    @apply flex flex-col justify-center 
-    md:text-[60px] text-[32px] 
-    leading-tight 
-    font-semibold 
-    relative z-10 
-    pointer-events-none;
-}
 
-    /* .hero-text {
+
+    .hero-text {
         @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
         img {
             @apply size-8 md:size-10 object-contain;
@@ -112,18 +101,15 @@ ul {
         .slide {
             @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
         }
-    } */
+    }
 
     .hero-badge {
         @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
     }
 
-   .hero-3d-layout {
-    @apply xl:w-[60%] w-full 
-    min-h-[45vh] xl:min-h-[60vh]
-    relative xl:absolute 
-    xl:-top-20 xl:-right-20;
-}
+     .hero-3d-layout {
+        @apply xl:w-[60%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+    }
 
     .navbar {
         @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
