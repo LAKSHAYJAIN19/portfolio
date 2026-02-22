@@ -30,7 +30,7 @@ const Hero = () => {
 
             <div className="hero-layout">
                 {/*Left: Hero Content*/}
-                <header className="flex flex-col justify-center md:w-full w-full md:px-20 px-6 pt-10 md:pt-0">
+                <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>Software Developer</h1>
@@ -53,7 +53,7 @@ const Hero = () => {
                             </h1>
                             <h1>with Tech.</h1>
                         </div>
-                        <p className="text-white-50 md:text-xl text-sm leading-relaxed relative z-10 max-w-xl pointer-events-none">
+                        <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                             Hi, I'm Lakshay, a B.Tech graduate based in Delhi ,India <br/>
                             with a passion for code and games.<br/>
                             During my college years, I completed PowerApps training with <br/>
