@@ -685,7 +685,7 @@ section {
     @apply relative z-20 cursor-pointer;
   }
 
-  .cta-button {
+  /* .cta-button {
     @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
@@ -707,7 +707,30 @@ section {
         @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
       }
     }
-  }
+  } */
+.cta-button {
+        @apply md:px-6 px-4 md:py-4 py-3 rounded-lg bg-black-200 flex justify-between items-center relative cursor-pointer overflow-visible min-h-12 md:min-h-14 gap-1 md:gap-2;
+
+        .bg-circle {
+            @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2
+            w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+            rounded-full bg-white-50 transition-all duration-500 pointer-events-none -z-10;
+        }
+
+        .text {
+            @apply uppercase md:text-base text-sm font-semibold text-white-50 transition-all duration-500
+            group-hover:text-black whitespace-nowrap flex-1 text-left relative z-10 group-hover:translate-x-1 md:group-hover:translate-x-2;
+        }
+
+        .arrow-wrapper {
+            @apply group-hover:bg-white-50 md:size-10 size-8 rounded-full relative flex-shrink-0 flex justify-center items-center
+            transition-all duration-500 bg-transparent md:bg-transparent group-hover:scale-110 group-hover:translate-x-1 md:group-hover:translate-x-2;
+
+            img {
+                @apply md:size-5 size-4 transition-all duration-500 group-hover:brightness-0 group-hover:-translate-y-1;
+            }
+        }
+    }
 
   .card-border {
     @apply border border-black-50 bg-black-100;
