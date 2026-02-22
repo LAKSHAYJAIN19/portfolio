@@ -19,6 +19,11 @@ body {
 section {
   width: 100dvw;
 }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 @theme {
   --font-sans: "Mona Sans", sans-serif;
