@@ -60,6 +60,7 @@
 // }
 // export default TechStack
 
+
 import { useEffect, Suspense } from "react";
 import TitleHeader from "../components/TitleHeader.jsx";
 import { techStackIcons } from "../constants/index.js";
@@ -67,17 +68,17 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
 const TechStack = () => {
 
-    // 🔥 Preload all models immediately
+    // ✅ Preload all models once
     useEffect(() => {
         techStackIcons.forEach((icon) => {
             useGLTF.preload(icon.modelPath);
         });
     }, []);
 
-    // GSAP animation
     useGSAP(() => {
         gsap.fromTo(
             ".tech-card",
@@ -104,52 +105,61 @@ const TechStack = () => {
                     sub="🤹🏻 The Skills I bring to the Table"
                 />
 
-                {/* 🔥 Single Shared Canvas */}
-                <div className="tech-grid">
+                {/* Responsive container */}
+                <div className="w-full h-[400px] md:h-[450px] mt-10">
                     <Canvas
-                        frameloop="demand"
+                        camera={{ position: [0, 0, 10], fov: 45 }}
                         dpr={[1, 1.5]}
-                        camera={{ position: [0, 0, 8] }}
+                        gl={{ antialias: false, powerPreference: "high-performance" }}
                     >
-                        <ambientLight intensity={0.4} />
+                        <ambientLight intensity={0.5} />
                         <directionalLight position={[5, 5, 5]} intensity={1} />
                         <Environment preset="city" />
 
                         <Suspense fallback={null}>
-                            {techStackIcons.map((icon, index) => (
-                                <TechModel
-                                    key={icon.name}
-                                    model={icon}
-                                    position={[
-                                        (index - 2) * 3, // spread horizontally
-                                        0,
-                                        0
-                                    ]}
-                                />
-                            ))}
+                            <ResponsiveModels />
                         </Suspense>
                     </Canvas>
+                </div>
 
-                    {/* Labels below */}
-                    <div className="flex justify-center gap-10 mt-6 flex-wrap">
-                        {techStackIcons.map((icon) => (
-                            <p key={icon.name}>{icon.name}</p>
-                        ))}
-                    </div>
+                {/* Labels */}
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center mt-8">
+                    {techStackIcons.map((icon) => (
+                        <p key={icon.name} className="text-lg md:text-xl">
+                            {icon.name}
+                        </p>
+                    ))}
                 </div>
             </div>
         </div>
     );
 };
 
-const TechModel = ({ model, position }) => {
+function ResponsiveModels() {
+    const { viewport } = useThree();
+    const isMobile = viewport.width < 8;
+
+    const spacing = isMobile ? 2.2 : 3;
+    const startX = -(spacing * (techStackIcons.length - 1)) / 2;
+
+    return techStackIcons.map((icon, i) => (
+        <TechModel
+            key={icon.name}
+            model={icon}
+            position={[startX + i * spacing, 0, 0]}
+            isMobile={isMobile}
+        />
+    ));
+}
+
+const TechModel = ({ model, position, isMobile }) => {
     const { scene } = useGLTF(model.modelPath);
 
     return (
         <Float speed={3} rotationIntensity={0.6} floatIntensity={0.8}>
             <group
                 position={position}
-                scale={model.scale}
+                scale={isMobile ? model.scale * 0.8 : model.scale}
                 rotation={model.rotation}
             >
                 <primitive object={scene.clone()} />
@@ -159,3 +169,4 @@ const TechModel = ({ model, position }) => {
 };
 
 export default TechStack;
+
