@@ -62,17 +62,6 @@ const Hero = () => {
                             and am proficient with data analytics tools like PowerBi and Tableau.
                         </p>
 
-                        {/*<div id="work" className="flex flex-col gap-5" >*/}
-                        {/*    <Button className="md:w-80 md:h-15 w-60 h-12"*/}
-                        {/*            text="See my Work"*/}
-                        {/*            id="work"*/}
-                        {/*    />*/}
-                        {/*</div>*/}
-                        {/*<Button className="md:w-80 md:h-15 w-60 h-12"*/}
-                        {/*  id="work"*/}
-                        {/*  href="#work"*/}
-                        {/*  text="See my Work"*/}
-                        {/*/>*/}
                     </div>
                 </header>
                 {/*Right: Hero 3D image*/}
