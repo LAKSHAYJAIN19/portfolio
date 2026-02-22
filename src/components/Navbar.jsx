@@ -32,18 +32,8 @@ const Navbar = () => {
                  ))}
              </ul>
            </nav>
-           {/* <a href="https://drive.google.com/file/d/1vuPKlvINHxjV9UVpiAVklwPEP2lhDi3Y/view?usp=sharing"
-              className="contact-btn group flex flex-col" target="_blank">
-               <div className="inner">
-                   <span>My Resume</span>
-               </div>
-           </a>
-           <a href="#contact" className="contact-btn group">
-             <div className="inner">
-               <span>Contact me</span>
-             </div>
-           </a> */}
-             <div className="flex gap-3 md:gap-0">
+        
+             <div className="flex gap-3 md:gap-5">
                   <a
                     href="https://drive.google.com/file/d/1vuPKlvINHxjV9UVpiAVklwPEP2lhDi3Y/view?usp=sharing"
                     className="contact-btn group"
