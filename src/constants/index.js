@@ -187,22 +187,22 @@ const expCards = [
             "adaptability of AWS services, making them more efficient and reliable for business use.",
         ],
     },
-    {
-        review:
-            "Celebal Technologies is a technology consulting company specializing in digital transformation, data engineering, cloud solutions, and enterprise platforms, helping organizations leverage modern technologies to drive business growth.",
-        imgPath: assetPath('images/exp4.png'),
-        logoPath: assetPath('images/logo4.png'),
-        title: "PowerApps Training",
-        date: "March 2023 - May 2023",
-        responsibilities: [
-            "During my training at Celebal, I gained hands-on experience with Microsoft PowerApps ",
-            "and Power Automate, learning to create full-length web and mobile applications. I ",
-            "developed skills in integrating applications with SharePoint, SQL, and other databases,",
-            "enabling seamless data management and workflow automation. This training enhanced my ",
-            "ability to design and deploy efficient, user-friendly business solutions.",
+    // {
+    //     review:
+    //         "Celebal Technologies is a technology consulting company specializing in digital transformation, data engineering, cloud solutions, and enterprise platforms, helping organizations leverage modern technologies to drive business growth.",
+    //     imgPath: assetPath('images/exp4.png'),
+    //     logoPath: assetPath('images/logo4.png'),
+    //     title: "PowerApps Training",
+    //     date: "March 2023 - May 2023",
+    //     responsibilities: [
+    //         "During my training at Celebal, I gained hands-on experience with Microsoft PowerApps ",
+    //         "and Power Automate, learning to create full-length web and mobile applications. I ",
+    //         "developed skills in integrating applications with SharePoint, SQL, and other databases,",
+    //         "enabling seamless data management and workflow automation. This training enhanced my ",
+    //         "ability to design and deploy efficient, user-friendly business solutions.",
 
-        ],
-    },
+    //     ],
+    // },
 ];
 
 const expLogos = [
