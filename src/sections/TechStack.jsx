@@ -1,11 +1,19 @@
+import { useEffect } from "react";
 import TitleHeader from "../components/TitleHeader.jsx";
 import {techStackIcons} from "../constants/index.js";
 import TechIcon from "../components/Models/TechLogos/TechIcon.jsx";
 import {useGSAP} from "@gsap/react";
 import {gsap} from 'gsap'
+import { useGLTF } from "@react-three/drei";
 
 const TechStack = () => {
 
+    useEffect(() => {
+        techStackIcons.forEach((icon) => {
+            useGLTF.preload(icon.modelPath);
+        });
+    }, []);
+    
     useGSAP(()=>{
         gsap.fromTo('.tech-card',{y:50, opacity:0},{
             y:0,
