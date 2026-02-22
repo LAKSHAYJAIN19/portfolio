@@ -147,6 +147,9 @@ ul {
       }
     }
 
+    .navbar .inner {
+  @apply mx-auto flex items-center justify-between gap-3;
+}
     .contact-btn {
       @apply flex;
 
