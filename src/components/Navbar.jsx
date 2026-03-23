@@ -35,7 +35,7 @@ const Navbar = () => {
         
              <div className="flex gap-3 md:gap-5">
                   <a
-                    href="https://drive.google.com/file/d/17Xh1LMhkE2c1hNRkEKnS4rfP_cXxxZVp/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1eC7A-Axqt5c0Y-o002ra35LTW7HtPESs/view?usp=sharing"
                     className="contact-btn group"
                     target="_blank"
                   >
